@@ -1,0 +1,411 @@
+LISTA DE PROGRAMAÇÃO
+
+1)#include "stdio.h"
+int main(void) {
+  int x,y;
+
+  printf("");
+  scanf("%d", &x);
+y=x+1;
+printf("%d\n", y);
+  return 0;
+}
+
+2) #include <stdio.h>
+
+int main(void) {
+  float m1,m2,m3,mediaf;
+  printf("Digite a primeira nota: \n");
+  scanf("%f", &m1);
+  
+  printf("Digite a segunda nota: \n");
+  scanf("%f", &m2);
+  
+  printf("Digite a terceira nota: \n");
+  scanf("%f", &m3);
+  
+  mediaf = (m1+m2+m3)/3;
+  
+  if(mediaf>=7){
+    printf("A media final e: %0.1f\n", mediaf);
+    printf("O aluno esta aprovado");
+
+  }
+  if((mediaf<7)&&(mediaf>=5)&&(m1>=3 && m2>=3 && m3>=3)){
+    printf("A media final e: %0.1f\n", mediaf);
+    printf("O aluno esta aprovado");
+  }
+  if((mediaf<7)&&(mediaf>=5)&&(m1<3||m2<3||m3<3)){
+    printf("A media final e: %0.1f\n", mediaf);
+    printf("O aluno esta em reposição");
+  }
+  if((mediaf<5)&&(mediaf>=3)){
+    printf("A media final e: %0.1f\n", mediaf);
+    printf("O aluno esta em reposição"); 
+  }
+  else{
+    printf("O aluno esta reprovado");
+  }
+
+  return 0;
+}
+
+3)#include <stdio.h>
+
+int main(void) {
+  float anos,cigarrosdia,carteira,gasto;
+  printf("Quantidade de anos em que a pessoa fumou: ");
+  scanf("%f", &anos);
+  printf("Quantidade de cigarros fumados por dia: ");
+  scanf("%f", &cigarrosdia);
+  printf("Preco da carteira de cigarro: ");
+  scanf("%f", &carteira);
+gasto = carteira*((cigarrosdia/20)*365)*anos;
+printf("O valor gasto ao longo da vida: R$%f", gasto);
+
+  return 0;
+}
+
+4) #include "stdio.h"
+int main(void) {
+  int x,y;
+  printf("Digite o valor de x: ");
+  scanf("%d", &x);
+  printf("Digite o valor de y: ");
+  scanf("%d", &y);
+  int q;
+  q = x/y;
+  printf("Valor da divisão inteira: %d\n", q);
+  int r;
+  r = x%y;
+  printf("Valor do resto: %d\n", r);
+  return 0;
+}
+
+5) #include "stdio.h"
+int main(void) {
+  float al,ab,r,h;
+  float at,vol;
+  printf("Digite o valor do raio: ");
+  scanf("%f", &r);
+  printf("Digite o valor da altura: ");
+  scanf("%f", &h);
+  al = 2*3.14*r*h;
+  ab = 3.14*r*r;
+  at = al + (ab+ab);
+  printf("Area = %f\n", at);
+  vol = ab*h;
+  printf("Volume = %f\n", vol);
+  return 0;
+}
+
+6)#include "stdio.h"
+int main(void) {
+  float x,y;
+  float soma,produto,quociente;
+  printf("Digite o valor de x: ");
+  scanf("%f", &x);
+  printf("Digite o valor de y: ");
+  scanf("%f", &y);
+  soma = x+y;
+  produto = x*y;
+  quociente = x/y;
+  printf("Soma = %f\n", soma);
+  printf("Produduto = %f\n", produto);
+  printf("Quociente = %f\n", quociente);
+
+  return 0;
+}
+
+7)#include "stdio.h"
+int main(void) {
+  float x,y,z;
+  printf("Digite o valor de x: ");
+  scanf("%f", &x);
+  printf("Digite o valor de y: ");
+  scanf("%f", &y);
+  printf("Digite o valor de z: ");
+  scanf("%f", &z);
+
+  if(x>y+z){ 
+    printf("O primeiro valor e maior que a soma dos outros");
+  }
+  else{ 
+    printf("O primeiro valor nao e maior que a soma dos outros");
+  }
+  return 0;
+}
+
+8) #include <stdio.h>
+int main(void) {
+  int a,b;
+  printf("Digite o valor de x: ");
+  scanf("%d", &a);
+  printf("Digite o valor de y: ");
+  scanf("%d", &b);
+  if(a>b){
+    printf("a e maior que b");
+  } 
+  else if (a<b){
+   printf("b e maior que a");
+}
+  else{
+    printf("b =a");
+   }
+   return 0;
+}
+
+9) #include <stdio.h>
+
+int main(void) {
+  float custofabrica, imposto, lucro, custofinal;
+  printf("Digite o valor do custo da fabrica: ");
+  scanf("%f", &custofabrica);
+  imposto = custofabrica*0.45;
+  lucro = imposto * 0.12;
+  custofinal = imposto + lucro + custofabrica;
+  printf("Impostos: %0.2f\n", imposto);
+  printf("Lucro do distribuidor: %0.2f\n", lucro);
+  printf("Custo ao consumidor: %0.2f\n", custofinal);
+
+  return 0;
+}
+
+10) #include "stdio.h"
+int main(void) {
+  float velmax, velmot, multa;
+  printf("Velocidade maxima permitida: ");
+  scanf("%f", &velmax);
+  printf("Velocidade do motorista: ");
+  scanf("%f", &velmot);
+
+  if(velmot>velmax){
+   if(velmot<=velmax+10){
+     printf("Multa: R$ 50,00\n");
+   }
+   if(velmax+10<velmot && velmot<=velmax+30){
+     printf("Multa: R$ 100,00\n");
+    }
+  if(velmot>velmax+30){
+    printf("Multa: R$ 200,00\n");
+  }
+  }
+else {
+  printf("Nao havera multa\n");
+
+}
+  return 0;
+}
+
+11) #include "stdio.h"
+int main(void) {
+  float c,z,l;
+  printf("Quantidade de cobre: ");
+  scanf("%f", &c);
+  printf("Quantidade de zinco: ");
+  scanf("%f", &z);
+
+  l = c*0.7 + z*0.3;
+  printf("Quantidade de latao: %f", l);
+  
+  
+  
+  return 0;
+}
+
+12) #include "stdio.h"
+int main(void) {
+  int x,y;
+  float q;
+  printf("Digite o primeiro numero: "); scanf("%d", &x);
+  printf("Digite o segundo numero: "); scanf("%d", &y);
+
+  if(y!=0){
+    q=x/y;
+    printf("Quociente do primeiro pelo segundo: %f\n", q);
+  }
+  else{
+    printf("DIVISAO POR ZERO\n");
+  }
+
+  return 0;
+}
+
+13) #include <stdio.h>
+
+int main(void) {
+  int x,y,z;
+  printf("Valor de x: ");
+  scanf("%d", &x);
+  printf("Valor de y: ");
+  scanf("%d", &y);
+  printf("Valor de z: ");
+  scanf("%d", &z);
+  printf("O maior numero eh:\n");
+
+
+
+  if(x>y && x>z){
+    printf("x\n");
+  }
+  else if (y>x && y>z){
+    printf("y\n");
+  }
+  else {
+    printf("z\n");
+  }
+  
+  return 0;
+}
+
+14) #include <stdio.h>
+
+int main(void) {
+  int n1,n2,n3,tmp1,tmp2,tmp3;
+  printf("Digite o primeiro numero:");
+  scanf("%d",&n1);
+  printf("Digite o segundo numero:");
+  scanf("%d",&n2);
+  printf("Digite o terceiro numero:");
+  scanf("%d",&n3);
+
+  if(n1>n2){
+    tmp1 = n1;
+    n1=n2;
+    n2=tmp1;
+  }
+  if(n1>n3){
+    tmp3 = n1;
+    n1=n3;
+    n3=tmp3;
+  }
+  if(n2>n3){
+    tmp2 = n2;
+    n2=n3;
+    n3=tmp2;
+  }
+  printf("Ordem crescente %d, %d, %d", n1,n2,n3);
+  return 0;
+}
+
+15) #include "stdio.h"
+#include <math.h>
+int main(void) {
+  float a,b,c,delta,x1,x2;
+  printf("Digite o valor de a: "); scanf("%f", &a);
+  printf("Digite o valor de b: "); scanf("%f", &b);
+  printf("Digite o valor de c: "); scanf("%f", &c);
+
+  delta = b*b - 4*a*c;
+
+  if(delta>=0){
+  x1 = (-b + sqrt(delta))/(2*a);
+  x2 = (-b - sqrt(delta))/(2*a);
+  printf("Raiz 1: %f\n", x1);
+  printf("Raiz 2: %f\n", x2);
+  }
+  else {
+    printf("Nao existem raizes reais para os valores digitados\n");
+  }
+  return 0;
+}
+
+16) #include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  float x1,y1,x2,y2,x3,y3;
+  float l1,l2,l3;
+  float tmp;
+  printf("Digite o 1 ponto:");
+  scanf("%f",&x1);
+  printf("Digite o 1 ponto:");
+  scanf("%f",&y1);
+
+  printf("Digite o 2 ponto:");
+  scanf("%f",&x2);
+  printf("Digite o 2 ponto:");
+  scanf("%f",&y2);
+
+  printf("Digite o 3 ponto:");
+  scanf("%f",&x3);
+  printf("Digite o 3 ponto:");
+  scanf("%f",&y3);
+
+  l1=sqrt(pow(x1-x2,2)+pow(y1-y2,2));
+  l2=sqrt(pow(x1-x3,2)+pow(y1-y3,2));
+  l3=sqrt(pow(x3-x2,2)+pow(y3-y2,2));
+
+  if(l1<l2){
+    tmp = l1;l1=l2;l2=tmp;
+  }
+  if(l1<l3){
+    tmp = l1;l1=l3;l3=tmp;
+  }
+  if(l1<l2+l3){
+    printf("Os pontos formam um triangulo");
+  }
+  else{
+    printf("Os pontos nao formam um triangulo");
+  }
+  if((l1==l2)&&(l2==l3)){
+    printf(" equilatero\n");
+  }
+  else if((l1==l2)||(l2==l3)||(l1==l3)){
+    printf(" isoceles\n");
+  }
+  else{
+    printf(" escaleno\n");
+  }
+
+
+
+  return 0;
+}
+
+17) #include <stdio.h>
+
+int main() 
+{ 
+int a,b,c,d,soma; 
+ soma = 0;
+printf("Entre com o primeiro numero: "); 
+scanf("%d",&a); 
+printf("Entre com o segundo numero: "); 
+scanf("%d",&b); 
+printf("Entre com o terceiro numero: "); 
+scanf("%d",&c); 
+printf("Entre com o quarto numero: "); 
+scanf("%d",&d); 
+
+if(a%2==0){
+  soma = soma + a;
+}
+if(b%2==0){
+  soma = soma + b;
+}
+if(c%2==0){
+  soma = soma + c;
+}
+if(d%2==0){
+  soma = soma + d;
+}
+printf("Soma: %d\n", soma);
+
+return 0;
+}
+
+18) #include "stdio.h"
+int main(void) {
+  int ano;
+  printf("Digite o ano: "); scanf("%d", &ano);
+
+  if(ano%400==0 || (ano%4==0 && ano%100>0)) {
+    printf("O ano eh bissexto");
+  }
+  else{
+    printf("O ano nao eh bissexto");
+  }
+  return 0;
+}
+
